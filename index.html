@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MindFull - Study Notes Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>MindFull</h1>
+      <p class="subtitle">
+        Track your study notes and never forget what you learn
+      </p>
+
+      <div class="add-note-section">
+        <div class="section-header">
+          <h2>Add New Study Note</h2>
+          <button type="button" id="toggle-form-btn" class="toggle-btn">
+            −
+          </button>
+        </div>
+        <div id="note-form-container">
+          <form id="note-form">
+            <div class="form-group">
+              <label for="note-title">Title:</label>
+              <input type="text" id="note-title" required />
+            </div>
+            <div class="form-group">
+              <label for="note-content">Content:</label>
+              <textarea id="note-content" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="note-date">Date:</label>
+              <input type="date" id="note-date" required />
+            </div>
+            <button type="submit" class="btn">Save Note</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="notes-section">
+        <h2>Your Study Notes</h2>
+        <div class="filter-controls">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="review">Need Review</button>
+        </div>
+        <div id="notes-container"></div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
